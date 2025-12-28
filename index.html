@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Birthday Surprise 💖</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="particles-js"></div>
+  <div class="floating-hearts" id="floatingHearts"></div>
+  <div class="petals" id="petalsContainer"></div>
+
+  <div class="container">
+    <div class="progress-bar"><div class="progress" id="progressBar"></div></div>
+
+    <!-- STEP 1 -->
+    <div class="step" id="step1">
+      <h1>Happy Birthday, My Sweet Sister 🎂💖</h1>
+      <p>I’ve made this little surprise just for you.</p>
+      <p>Are you ready to feel how special you truly are?</p>
+      <img src="https://png.pngtree.com/png-vector/20250422/ourmid/pngtree-cute-girl-holding-birthday-cake-smiling-cheerfully-png-image_16067658.png" width="200" alt="Girl holding birthday cake">
+      <button class="btn" onclick="nextStep()">Open Your Surprise 🎁</button>
+    </div>
+
+    <!-- STEP 2 -->
+    <div class="step" id="step2">
+      <h2>Let’s Make This Special ✨</h2>
+      <p>What’s the name of the most wonderful sister in the world?</p>
+      <input class="name-input" id="nameInput" placeholder="Type your name 💕">
+      <button class="btn" onclick="saveName()">Continue</button>
+    </div>
+
+    <!-- STEP 3 -->
+    <div class="step" id="step3">
+      <h2>For You, <span id="displayName">My Sister 💖</span></h2>
+      <p>Tap the heart and feel how much you are loved.</p>
+      <div class="heart" onclick="createHearts()"></div>
+      <p>
+        You are not just my sister, you are my safe place, my smile,
+        and my forever friend 💕 <span id="heartName"></span>,  
+        meri zindagi ka sabse pyaara hissa ho tum 🤍
+      </p>
+      <button class="btn" onclick="nextStep()">Continue 💫</button>
+    </div>
+
+    <!-- STEP 4 -->
+    <div class="step" id="step4">
+      <h2>A Message From Your Bhai 💌</h2>
+      <div class="photo-frame">
+        <img src="https://medias.artmajeur.com/standard/17262319_a-cutel-european-girl-full-bodycartoon-style-illustration-drawn-with-posca-markers-pretty-face-586679414-1.jpg" alt="Cute girl illustration">
+      </div>
+      <div class="message-box" id="typedMessage">
+        <p class="typing-effect" id="typingText"></p>
+      </div>
+      <button class="btn" onclick="nextStep()">See Our Memories 📸</button>
+    </div>
+
+    <!-- STEP 5 -->
+<div class="step" id="step5">
+  <h2>Beautiful Memories 💞</h2>
+  <p>Some moments I will always cherish.</p>
+  <div class="memory-container">
+    <div class="polaroid">
+      <img src="images/pic1.jpg" alt="Childhood Smiles">
+      <div class="polaroid-caption">Childhood Smiles 😊</div>
+    </div>
+    <div class="polaroid">
+      <img src="images/pic2.jpg" alt="Fun Times">
+      <div class="polaroid-caption">Fun Times 💕</div>
+    </div>
+    <div class="polaroid">
+      <img src="images/pic3.jpg" alt="Crazy Moments">
+      <div class="polaroid-caption">Crazy Moments 😄</div>
+    </div>
+    <div class="polaroid">
+      <img src="images/pic4.jpg" alt="Sweet Memories">
+      <div class="polaroid-caption">Sweet Memories 🌸</div>
+    </div>
+    <div class="polaroid">
+      <img src="images/pic5.jpg" alt="Forever Us">
+      <div class="polaroid-caption">Forever Us 💖</div>
+    </div>
+  </div>
+  <button class="btn" onclick="nextStep()">Watch Something Special 🎥</button>
+</div>
+
+
+    <!-- STEP 6 (VIDEO) -->
+    <div class="step" id="step6">
+      <h2>Just For You 🎥💖</h2>
+      <video controls>
+        <source src="video/birthday.mp4" type="video/mp4">
+      </video>
+      <p>
+        Har frame mein meri dua hai,  
+        har pal mein mera pyaar 🤍
+      </p>
+      <button class="btn" onclick="nextStep()">Final Surprise 🌸</button>
+    </div>
+
+    <!-- STEP 7 -->
+    <div class="step" id="step7">
+      <h1>Happy Birthday, <span id="finalName">My Lovely Sister 💖</span> 🎂</h1>
+      <p>✨ May your life always be filled with smiles, peace and success ✨</p>
+      <p>
+        Tumhari khushi meri sabse badi jeet hai,  
+        aur tumhara saath meri taqat 🤍
+      </p>
+      <p>
+        No matter where life takes us,  
+        your bhai will always stand beside you 🛡️
+      </p>
+      <div class="signature">With endless love — Your Brother ❤️</div>
+
+      <div class="social-share">
+        <div class="social-icon" onclick="shareOnSocial('facebook')"><i class="fab fa-facebook-f"></i></div>
+        <div class="social-icon" onclick="shareOnSocial('twitter')"><i class="fab fa-twitter"></i></div>
+        <div class="social-icon" onclick="shareOnSocial('whatsapp')"><i class="fab fa-whatsapp"></i></div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
