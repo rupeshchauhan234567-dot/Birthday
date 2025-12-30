@@ -122,8 +122,6 @@ function createPetals() {
 function typeMessage() {
   const messages = [
     `Dear ${userName} 💖`,
-    "Today is a very special day.",
-    "Because today, my amazing sister was born ✨",
     "You are not just my sister...",
     "You are my best friend and my strength 🤍",
     "Your smile makes everything feel better 😊",
@@ -131,7 +129,7 @@ function typeMessage() {
     "I am always here for you, no matter what 🛡️",
     "May all your dreams come true 💫",
     "Never stop being this wonderful person 💕",
-    "Happy Birthday, my sweet sister 🎂💖",
+    "Happy Birthday, Meri pyaari Moti 🎂💖",
   ];
   const typingText = document.getElementById("typingText");
   let mIndex = 0,
